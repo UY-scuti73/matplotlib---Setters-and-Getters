@@ -2473,6 +2473,7 @@ class Figure(FigureBase):
                  layout=None,
                  **kwargs
                  ):
+        print("test")
         """
         Parameters
         ----------
@@ -2558,6 +2559,7 @@ None}, default: None
         super().__init__(**kwargs)
         self._root_figure = self
         self._layout_engine = None
+        self.layout = layout
 
         if layout is not None:
             if (tight_layout is not None):
@@ -2736,6 +2738,18 @@ None}, default: None
 
     def get_layout_engine(self):
         return self._layout_engine
+
+    def get_layout(self):
+        return self.layout
+
+    def set_layout(self, layout):
+        self.layout = layout
+
+    def get_subplotpars(self):
+        return self.subplotpars
+
+    def set_subplotpars(self, subpars):
+        self.subplotpars = subpars
 
     # TODO: I'd like to dynamically add the _repr_html_ method
     # to the figure in the right context, but then IPython doesn't
