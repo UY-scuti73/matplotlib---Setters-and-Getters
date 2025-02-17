@@ -2473,7 +2473,6 @@ class Figure(FigureBase):
                  layout=None,
                  **kwargs
                  ):
-        print("test")
         """
         Parameters
         ----------
