@@ -2751,6 +2751,7 @@ None}, default: None
     def set_subplotpars(self, subpars):
         self.subplotpars = subpars
 
+
     # TODO: I'd like to dynamically add the _repr_html_ method
     # to the figure in the right context, but then IPython doesn't
     # use it, for some reason.
